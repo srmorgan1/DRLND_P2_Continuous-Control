@@ -61,7 +61,7 @@ The Ornstein-Uhlenbeck noise parameters (theta 0.15 and sigma 0.2) were left the
 
 ## Results
 
-The environment was solved (training score greater than or equal to 30 for 100 time steps) in 101 episodes.
+The environment was solved (training score greater than or equal to 30 for 100 episodes) in 101 episodes.
 A graph of the rewards obtained during the training episodes is shown below:
 
 ![Traing Performance](report/training_scores.png)
