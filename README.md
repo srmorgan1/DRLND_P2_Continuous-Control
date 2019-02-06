@@ -20,7 +20,7 @@ The observation space consists of 33 variables corresponding to position, rotati
 
 ### Distributed Training
 
-For this project, there are two separate versions of the Unity environment:
+There are two separate versions of the Unity environment which can be used for this project:
 - The first version contains a single agent.
 - The second version contains 20 identical agents, each with its own copy of the environment.  
 
@@ -29,9 +29,10 @@ that use multiple (non-interacting, parallel) copies of the same agent to distri
 
 ### Solving the Environment
 
-he implementation presented here is use of the [DDPG](https://arxiv.org/pdf/1509.02971.pdf) algorithm to solve the second environment..
-The task is episodic, and in order to solve the environment we must take into account the presence of many agents. The environment is considered solved if the agents get an average score of +30 over 100 consecutive episodes, and over all agents.  Specifically,
-- After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent.  This yields 20 (potentially different) scores.  We then take the average of these 20 scores. 
+The implementation presented here is to use the [DDPG](https://arxiv.org/pdf/1509.02971.pdf) algorithm to solve the second environment.
+The task is episodic, and in order to solve the environment we must take into account the presence of many agents. The environment is considered solved if the agents get an average score of +30 over 100 consecutive episodes, and over all agents.  Specifically:
+
+- After each episode, we add up the rewards that each agent received (without discounting), to get a score for each agent. This yields 20 (potentially different) scores.  We then take the average of these 20 scores. 
 - This yields an **average score** for each episode (where the average is over all 20 agents).
 
 The environment is considered solved, when the average (over 100 episodes) of those average scores is at least +30. 
